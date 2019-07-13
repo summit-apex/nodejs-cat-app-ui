@@ -32,6 +32,8 @@ This project was originally published in [Deploying a scalable web application w
    npm run start-server           // Start the Express Server on port 5500
    ```
   
+  
+  Whenever you or someone else wants to add new dependencies to the project you perform npm install --save or npm install --save-dev. Then package.json is automatically updated, and needs to be committed again.
 ### For Production
 
 1. **Environment variables**: Create a new file called `.env` located in the root of your project directory. Add your production domain and docker hub username. See the example in `.env.example`. 
