@@ -34,7 +34,12 @@ This project was originally published in [Deploying a scalable web application w
   
   
   Whenever you or someone else wants to add new dependencies to the project you perform npm install --save or npm install --save-dev. Then package.json is automatically updated, and needs to be committed again.
-### For Production
+
+
+![[catURL website](https://github.com/postmanlabs/node-doc-kube/blob/master/catUrl.gif)](https://github.com/postmanlabs/node-doc-kube/blob/master/catUrl.gif)
+
+
+## For Production
 
 1. **Environment variables**: Create a new file called `.env` located in the root of your project directory. Add your production domain and docker hub username. See the example in `.env.example`. 
 1. **API tests**: If you plan to run Postman tests, then update the `bin/deploy.sh` file by selecting a method of running your Postman tests. To run either of the last 2 options, update your Postman collection UID and environment UID in `bin/deploy.sh` and also add your [Postman API](https://docs.api.getpostman.com/) key to the `.env` file you created in the previous step.
@@ -44,5 +49,3 @@ This project was originally published in [Deploying a scalable web application w
 `npm run deploy // run API tests, then deploy frontend and backend to production`
 
 For the deployment, I used a hosted Kubernetes provider called [Kubesail](https://kubesail.com/) that creates a free managed namespace. However, the underlying deployment utility [`npx deploy-to-kube`](https://github.com/kubesail/deploy-to-kube) supports any Kubernetes cluster. By running it inside your app's directory, this utility will automatically generate a Dockerfile (if it doesn't exist), build and push deployment images, generate Kubernetes configuration files (if it doesn't exist), and trigger a deployment on your Kubernetes cluster. 
-
-![[catURL website](https://github.com/postmanlabs/node-doc-kube/blob/master/catUrl.gif)](https://github.com/postmanlabs/node-doc-kube/blob/master/catUrl.gif)
