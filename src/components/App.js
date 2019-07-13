@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import '../css/App.css';
 
-const redirectTarget = process.env.NODE_ENV == 'development' ? 'http://localhost:5500' : process.env.REACT_APP_HOST;
+const redirectTarget = process.env.NODE_ENV === 'development' ? 'http://localhost:5500' : process.env.REACT_APP_HOST;
 
 class App extends Component {
 
