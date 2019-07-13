@@ -9,7 +9,22 @@ This project was originally published in [Deploying a scalable web application w
     npm install // install dependencies
     npm start // start app on 3000
     npm run start-server // start server on 5500
-
+    
+### Actual Steps
+  1. Verify docker login from command line and web
+  2. Create a .env file
+  ```
+     cp .env.sample .env
+  ```
+  3. Add docker username to .env file
+  4. npm install  // START REACT APP to install dependencies
+  5. npm start // start react-app on 3000 may change to explicitly call 
+  ```
+      npm start react-app
+  ```
+  6. npm audit fix // to fix vulenablilites uncovered
+  7. npm run start-server // Start the Express Server on port 5500
+  
 ### For Production
 
 1. **Environment variables**: Create a new file called `.env` located in the root of your project directory. Add your production domain and docker hub username. See the example in `.env.example`. 
