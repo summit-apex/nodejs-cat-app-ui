@@ -10,20 +10,27 @@ This project was originally published in [Deploying a scalable web application w
     npm start // start app on 3000
     npm run start-server // start server on 5500
     
-### Actual Steps
-  1. Verify docker login from command line and web
-  2. Create a .env file
+### Steps to Build
+  
   ```
-     cp .env.sample .env
+     docker login                  // verified I could log into Docker
+     git clone <cat-app-ui-repo> 
+     cd <cat-app-ui-repo>
+     cp .env.sample .env           // create a .env file from example and added my docker username to entry
+     npm install
+     npm audit fix                 // fix the audit errors that can be fixed automatically
+     npm audit                     // find out details for steps to fix these manually
   ```
-  3. Add docker username to .env file
-  4. npm install  // START REACT APP to install dependencies
-  5. npm start // start react-app on 3000 may change to explicitly call 
+  
+ ### Steps to Launch Cat UI
+ ```
+     npm start
   ```
-      npm start react-app
+  
+### Steps to Launch Cat Express Server
   ```
-  6. npm audit fix // to fix vulenablilites uncovered
-  7. npm run start-server // Start the Express Server on port 5500
+   npm run start-server           // Start the Express Server on port 5500
+   ```
   
 ### For Production
 
